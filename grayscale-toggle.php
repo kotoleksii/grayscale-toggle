@@ -6,13 +6,13 @@ Version: 1.0
 Author: Kot Oleksii
 */
 
-// Додаємо скрипти та стилі
+// Add script
 function grayscale_toggle_scripts() {
     wp_enqueue_script('grayscale-toggle-script', plugin_dir_url(__FILE__) . 'js/grayscale-toggle.js', array('jquery'), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'grayscale_toggle_scripts');
 
-// Додаємо посилання в меню topbar
+// Add topbar menu link
 function add_grayscale_toggle_to_menu($items, $args) {
     if ($args->theme_location == 'topbar') {
         $toggle_text = 'Людям з порушеннями зору';
